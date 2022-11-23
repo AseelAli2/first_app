@@ -1,0 +1,173 @@
+import 'package:flutter/material.dart';
+
+main() {
+ Widget body = Center(
+   child: Text(
+     'we are here aseem!'
+   ),
+ );
+ MaterialApp app = MaterialApp(
+   home: Scaffold(
+     appBar: AppBar(
+       title: Text('Hello'),
+
+     ),
+     body: body,
+   ),
+
+ );
+ runApp(app);
+}
+////////
+import 'package:flutter/material.dart';
+
+ void main() {
+
+  runApp(MyApp ());
+
+
+}
+class MyApp extends StatelessWidget{
+  @override
+
+  Widget build (BuildContext context) {
+     return MaterialApp(
+  home: Scaffold(
+    body:  HomeScreen(),
+  ),
+);
+  }
+}
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(child: Container(
+      color: Colors.yellow,
+      width: 150,
+      height: 150,
+      child: Container(
+        color: Colors.pink,
+        child: Center( child: Text("Hello aseel")),
+      ),
+    ));
+  }
+}
+
+////////////
+import 'package:flutter/material.dart';
+
+ void main() {
+runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SafeArea(child: HomeScreen3()),
+      ),
+
+
+    );
+  }
+}
+class HomeScreen3 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+       Column(
+           children: <Widget>[
+             Icon(
+        Icons.share,
+      color: Colors.lightBlue,
+      size: 50,
+       ),
+             Text("Share")
+        ],
+       ),
+    Column(
+    children: <Widget>[
+    Icon(
+    Icons.share,
+    color: Colors.lightBlue,
+    size: 50,
+    ),
+    Text("Share")
+    ],
+    ),
+    );
+  }}
+
+class HomeScreen2 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(25),
+      padding: EdgeInsets.all(10),
+      color: Colors.deepPurple,
+      width: 400,
+      height: 400,
+      child: Column(
+       mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Container(
+            color: Colors.yellow,
+            width: 100,
+            height: 100,
+            child: Center(
+              child: Text(
+                "hello",
+
+              ),
+            ),
+          )
+        ],
+
+      ),
+    )
+
+  }
+
+
+}
+/////////
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(Center(
+      child: Directionality(
+        textDirection: TextDirection.ltr,
+        child: Icon(
+    Icons.favorite,
+
+    color: Colors.pink,
+    size: 24.0,
+    semanticLabel: 'Text to announce in accessibility modes',
+  ),
+      ),
+  )
+
+  );
+}
+///////////////////
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(Center(
+      child: Directionality(
+        textDirection: TextDirection.ltr,
+        child: Icon(
+    Icons.favorite,
+
+    color: Colors.pink,
+    size: 24.0,
+    semanticLabel: 'Text to announce in accessibility modes',
+  ),
+      ),
+  )
+
+  );
+}
